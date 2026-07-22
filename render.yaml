@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: liber-bright-lp
+    runtime: static
+    staticPublishPath: ./export
+    buildCommand: "echo no build step"
+    routes:
+      - type: rewrite
+        source: /
+        destination: /index.html
