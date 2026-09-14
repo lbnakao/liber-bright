@@ -11,3 +11,9 @@
 ## デプロイ
 Render の Static Site として `export` ディレクトリを公開します。
 `render.yaml` により Publish Directory は `./export` に設定済みです。
+
+## デザイン更新の反映手順（次回用）
+1. Claude Design で「Export → HTML」し、`LIBER BRIGHT LP.html`（画像内蔵の単体ファイル）をダウンロード
+2. このフォルダで Claude Code に「ダウンロードした書き出しHTMLを export/ に展開して push して」と依頼
+   （中身：`<script type="__bundler/template">` のHTMLと `__bundler/manifest` のbase64画像を `index.html` + `assets/` に分解）
+3. `git push origin main` → Render が自動デプロイ（数分）
